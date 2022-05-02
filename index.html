@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caleb J Barnes</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/assets/images/CBCLogoMK7.png" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_wbVcx8eQuaZZyoWKNuW6v");
+    })();
+  </script>
+</head>
+
+<body>
+  <section id="landing-page" onmousemove="moveBackground(event)">
+    <nav>
+      <figure>
+        <img id="personal-logo" src="./assets/images/CBCLogoMK7.png" alt="">
+      </figure>
+      <ul class="nav__link--list">
+        <li class="nav__link" onclick="toggleModal()">
+          <a href="#" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          ">About</a>
+        </li>
+        <li class="nav__link">
+          <a href="#projects" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          ">Projects</a>
+        </li>
+        <li class="nav__link">
+          <a href="#Languages" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          ">Languages</a>
+        </li>
+        <li class="nav__link" onclick="toggleModal()">
+          <a href="mailto:iamcalebbarnes@gmail.com" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          ">Contact</a>
+        </li>
+        <li class="nav__link click" onclick="toggleContrast()">
+          <a href="#" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          "><i class="fas fa-adjust"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <header class="header">
+      <div class="header__content">
+        <h1 class="title">Hey</h1>
+        <h1 class="title orange">I'm Caleb.</h1>
+        <h2 class="header__para orange">Frontend Software Engineer</h2>
+        <p class="header__para">
+          Here's a bit more <b 
+          class=
+          "link__hover-effect
+          link__hover-effect--black
+          link__hover-effect--white
+          " onclick="toggleModal()">about me</b>.
+        </p>
+        <div class="social__list">
+          <a href="https://www.linkedin.com/in/david-bragg-5b23a1176/" target="_blank" class="social__link click">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/CalebBarnes13" target="_blank" class="social__link click">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="./assets/images/" target="_blank" class="social__link click">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <a href="#">
+      <button class="mail__btn click" onclick="toggleModal()">
+        <i class="fas fa-envelope"></i>
+      </button>
+    </a>
+    <a href="#projects" class="scroll">
+      <div class="scroll__icon click"></div>
+    </a>
+    <div class="modal">
+      <div class="modal__half modal__about">
+        <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+        <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer.</h4>
+        <p class="modal__para">
+          I'm a 22 year-old <b class="green">frontend software engineer</b> with beginner experience in frontend software development.
+          <br>
+          I currently solve beginner too junior level engineering
+          problems every day with <b class="green">HTML</b>, <b class="green">CSS</b>, <b
+            class="green">JavaScript</b>, and <b class="green">React</b>.
+        </p>
+        <div class="modal__languages">
+          <figure class="modal__language">
+            <img class="modal__language--img"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+              alt="">
+            <span class="language__name">HTML</span>
+          </figure>
+
+          <figure class="modal__language">
+            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+              alt="">
+            <span class="language__name">CSS</span>
+          </figure>
+
+          <figure class="modal__language">
+            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+              alt="">
+            <span class="language__name">JavaScript</span>
+          </figure>
+
+          <figure class="modal__language">
+            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+              alt="">
+            <span class="language__name">React</span>
+          </figure>
+
+          <figure class="modal__language">
+            <img class="modal__language--img" src="./assets/images/git.png" alt="">
+            <span class="language__name">Git</span>
+          </figure>
+        </div>
+      </div>
+      <div class="modal__half modal__contact">
+        <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+        <h3 class="modal__title modal__title--contact">
+          Let's have a chat!
+        </h3>
+        <h3 class="modal__sub-title modal__sub-title--contact">
+          I'm currently open to new opportunities.
+        </h3>
+        <form id="contact__form" onsubmit="contact(event)">
+          <div class="form__item">
+            <label class="form__item--label">Name</label>
+            <input class="input" name="user_name" type="text" required></input>
+          </div>
+          <div class="form__item">
+            <label class="form__item--label">Email</label>
+            <input class="input" name="user_email" type="email" required></input>
+          </div>
+          <div class="form__item">
+            <label class="form__item--label">Message</label>
+            <textarea class="input" name="message" type="text" required></textarea>
+          </div>
+          <button id="contact__submit" class="form__submit">
+            Send it my way
+          </button>
+        </form>
+        <div class="modal__overlay modal__overlay--loading">
+          <i class="fas fa-spinner"></i>
+        </div>
+        <div class="modal__overlay modal__overlay--success">
+          Thanks for the message! Looking forward to speaking to you soon.
+        </div>
+      </div>
+    </div>
+    <img src="./assets/images/shapes.svg" class="shape shape--0">
+    <img src="./assets/images/shapes.svg" class="shape shape--1">
+    <img src="./assets/images/shapes.svg" class="shape shape--2">
+    <img src="./assets/images/shapes.svg" class="shape shape--3">
+    <img src="./assets/images/shapes.svg" class="shape shape--4">
+    <img src="./assets/images/shapes.svg" class="shape shape--5">
+    <img src="./assets/images/shapes.svg" class="shape shape--6">
+    <img src="./assets/images/shapes.svg" class="shape shape--7">
+    <img src="./assets/images/shapes.svg" class="shape shape--8">
+  </section>
+  <section id="Languages">
+    <figure class="language__img--wrapper2">
+          <img src="./assets/images/coding.png" 
+          alt="Programming Languages" class="language__img"/>
+        </figure>
+    <div id="container">
+      <div class="row">
+        
+        <h1 class="section__title">
+          Here are some of my <span class="orange">skills</span>
+        </h1>
+        <div class="language__list">
+          <div class="language">
+            <figure class="language__img--wrapper">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                alt="Html Logo" class="language__img" />
+            </figure>
+            <span class="language__name">HTML</span>
+          </div>
+          <div class="language">
+            <figure class="language__img--wrapper">
+              <img src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="CSS Logo"
+                class="language__img" />
+            </figure>
+            <span class="language__name">CSS</span>
+          </div>
+          <div class="language">
+            <figure class="language__img--wrapper">
+              <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="JavaScript Logo"
+                class="language__img" />
+            </figure>
+            <span class="language__name">JavaScript</span>
+          </div>
+          <div class="language">
+            <figure class="language__img--wrapper">
+              <img src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="React Logo"
+                class="language__img" />
+            </figure>
+            <span class="language__name">React</span>
+          </div>
+          <div class="language">
+            <figure class="language__img--wrapper">
+              <img src="./assets/images/git.png" alt="Git Logo"
+                class="language__img" />
+            </figure>
+            <span class="language__name">Git</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="projects">
+    <div class="container">
+      <div class="row">
+        <h1 class="section__title">
+          Here are some of my <span class="orange">projects</span>
+        </h1>
+        <ul class="project__list">
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/images/Bookstore.png" class="project__img" alt="Bookstore">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  E-Library
+                </h3>
+                <h4 class="project__description--sub-title">
+                  Html, CSS, JavaScript, React
+                </h4>
+                <p class="project__description--para">
+                  E-Library is a high functioning Library. Pulling some of the most popular books on building finances, self image, and overall wellness for day to day life. 
+                  The E-Library gives a simple yet functinoal way to find your favorite books.
+                </p>
+                <div class="project__description--links">
+                  <a href="https://github.com/CalebBarnes13" target="_blank"
+                    class="project__description--link">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://bookstoreapp-react.herokuapp.com" target="_blank" class="project__description--link">
+                    <i class="fas fa-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/images/DbzWikiPage.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  Dragon Ball Z Wiki Page
+                </h3>
+                <h4 class="project__description--sub-title">
+                  Html, CSS
+                </h4>
+                <p class="project__description--para">
+                  A "modern" and simplistic fanmade Wiki page for Dragon Ball Z.
+                  This project was to test my Html and CSS skills.
+                </p>
+                <div class="project__description--links">
+                  <a href="https://github.com/CalebBarnes13" target="_blank"
+                    class="project__description--link">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://calebbarnes13.github.io/DbzWikiP/" target="_blank" class="project__description--link">
+                    <i class="fas fa-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/images/Eportfolio YT.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  Client E-Portfolio
+                </h3>
+                <h4 class="project__description--sub-title">
+                  Html, CSS
+                </h4>
+                <p class="project__description--para">
+                  E-Portfolio built to help my client with entry level to mid level jobs. 
+                  Made with high functioning user interface.
+                  
+                </p>
+                <div class="project__description--links">
+                  <a href="https://github.com/CalebBarnes13" target="_blank"
+                    class="project__description--link">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="#" target="_blank" class="project__description--link">
+                    <i class="fas fa-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row footer__row">
+        <a href="#" class="footer__anchor">
+          <figure class="footer__logo">
+            <img src="./assets/images/CBCLogoMK7.png" class="footer__logo--img" alt="">
+          </figure>
+          <span class="footer__logo--popper">
+            Top
+            <i class="fas fa-arrow-up"></i>
+          </span>
+        </a>
+        <div class="footer__social--list">
+          <a href="https://github.com/CalebBarnes13" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/calebbarnes13/" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            LinkedIn
+          </a>
+          <a href="mailto:iamcalebbarnes@gmail.com" onclick="toggleModal()" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            Contact
+          </a>
+          <a href="./assets/David Bragg Resume.pdf" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            Resume
+          </a>
+        </div>
+        <div class="footer__copyright">Copyright &copy; 2022 Caleb Barnes</div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
